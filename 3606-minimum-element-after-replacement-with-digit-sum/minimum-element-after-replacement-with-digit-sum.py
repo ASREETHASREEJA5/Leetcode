@@ -3,11 +3,9 @@ class Solution:
         ans = nums[0]
         for i in range(len(nums)):
             sum1 =0 
-            n = nums[i]
-            while n>0:
-                rem = n%10
-                sum1+=rem
-                n//=10
+            n = str(nums[i])
+            for j in n:
+                sum1+=int(j) 
             if ans>sum1:
                 ans = sum1
         return ans 
