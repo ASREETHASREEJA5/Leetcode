@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
-        st = deque()
+        st = []
         temp = head
         while temp is not None:
             st.append(temp.val)
