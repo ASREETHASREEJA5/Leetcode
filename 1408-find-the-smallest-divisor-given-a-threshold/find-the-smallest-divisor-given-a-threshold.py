@@ -14,7 +14,7 @@ class Solution:
                 j=mid-1
             else:
                 i = mid+1
-        return j+1
+        return i
 
 
         
