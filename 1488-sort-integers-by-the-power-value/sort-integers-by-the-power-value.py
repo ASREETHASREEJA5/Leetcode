@@ -12,6 +12,5 @@ class Solution:
                 c+=1
             l[i] = c
         sorted_items = sorted(l.items(), key=lambda x: (x[1], x[0]))
-        print(sorted_items)
         return sorted_items[k - 1][0]
             
