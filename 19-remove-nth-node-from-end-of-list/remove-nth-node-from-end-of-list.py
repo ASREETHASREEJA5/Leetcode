@@ -21,7 +21,6 @@ class Solution:
         for i in range(m):
             prev = ptr
             ptr = ptr.next
-        print(ptr.val)
         prev.next = ptr.next
         ptr = None
         return head
