@@ -6,6 +6,5 @@ class Solution:
             l.append(rem)
             n = n//10
         l.sort(reverse = True)
-        print(l)
         return int(l[0])*int(l[1])
         
