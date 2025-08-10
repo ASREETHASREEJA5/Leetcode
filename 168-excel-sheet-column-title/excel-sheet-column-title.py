@@ -1,7 +1,5 @@
 class Solution:
     def convertToTitle(self, c: int) -> str:
-        if c<=26:
-            return chr(64+c)
         ans = ""
         while c>0:
             c-=1
