@@ -1,6 +1,5 @@
 class Solution:
     def shortestCompletingWord(self, licensePlate: str, words: List[str]) -> str:
-        words = ["".join(w.lower()) for w in words]
         chars = "".join(ch.lower() for ch in licensePlate if ch.isalpha())
         need = Counter(chars)
         ans = None
