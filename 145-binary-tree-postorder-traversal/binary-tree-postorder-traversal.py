@@ -6,23 +6,24 @@
 #         self.right = right
 class Solution:
     def postorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-        l = []
-        if root is None:
-            return l
-        st1,st2 = [],[]
+        result = []
+        stack = []
+        curr = root
+        lastVisited = None
 
-        st1.append(root)
-        while st1:
-            root = st1.pop()
-            st2.append(root)
-            if root.left:
-                st1.append(root.left)
-            if root.right:
-                st1.append(root.right)
-        while st2:
-            l.append(st2[-1].val)
-            st2.pop()
-        return l
+        while stack or curr:
+            if curr:
+                stack.append(curr)
+                curr = curr.left
+            else:
+                peek = stack[-1]
+                # if right child exists and not visited
+                if peek.right and lastVisited != peek.right:
+                    curr = peek.right
+                else:
+                    result.append(peek.val)  # visit node
+                    lastVisited = stack.pop()
 
+        return result
 
         
